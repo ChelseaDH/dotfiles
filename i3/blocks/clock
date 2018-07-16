@@ -1,0 +1,6 @@
+case $BLOCK_BUTTON in
+	1) printf " "$(date '+%d/%m/%y') ; exit ;;
+	# 2|3) i3-sensible-terminal -r i3blocks-clock-term --geometry 68x35 -e "$SHELL -c \"cal -y $(date +'%Y');$SHELL\"" &>/dev/null & ;;
+	2|3) chromium https://calendar.google.com;;
+	*) printf " "$(date '+%H:%M')
+esac
