@@ -151,8 +151,8 @@ for_window [title="^rofi$"] floating enable
 new_window pixel 5
 new_float none
 
-gaps inner 7
-gaps outer 2
+gaps inner 16
+gaps outer 4
 #smart_gaps on 
 
 focus_follows_mouse yes
