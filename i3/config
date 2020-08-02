@@ -166,6 +166,6 @@ bindsym XF86MonBrightnessDown	exec xbacklight -dec 5
 
 #startup programs
 exec --no-startup-id picom
-exec --no-startup-id ~/.fehbg
 exec --no-startup-id nm-applet
+exec_always --no-startup-id feh --no-fehbg --bg-fill ~/.config/wallpaper.jpg
 exec_always --no-startup-id "killall -q polybar || true && polybar -r desktopbar"
