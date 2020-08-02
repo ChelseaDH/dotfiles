@@ -43,7 +43,7 @@ line-colour = #f00
 
 modules-left = i3
 modules-center =
-modules-right = xbacklight pulseaudio xkeyboard eth memory cpu ryzentemp date powermenu
+modules-right = updates xbacklight pulseaudio xkeyboard eth memory cpu ryzentemp date powermenu
 
 tray-position = right
 tray-detached = false
@@ -100,6 +100,15 @@ label-visible-underline = ${self.label-focused-underline}
 label-urgent = %index%
 label-urgent-background = ${colours.urgent}
 label-urgent-padding = 2
+
+
+[module/updates]
+type = custom/script
+exec = ~/.config/polybar/update.sh
+tail = true
+format-prefix = "  "
+format-prefix-foreground = ${colours.icon}
+click-left = systemd-run --user --no-block -- termite -e 'sh -c "yay; kill -USR1 %pid%; sleep 1"'
 
 
 [module/mpd]
