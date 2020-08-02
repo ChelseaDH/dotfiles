@@ -129,7 +129,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Colours
-set $bg-color 			#553555
+set $bg-color 			#8c5fa4
 set $ia-bg-color 		#564E58
 set $br-color 			#904E55
 set $ia-br-color 		#252627
