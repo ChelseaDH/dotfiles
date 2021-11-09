@@ -8,10 +8,12 @@ compinit
 
 zstyle ':completion:*' menu select
 
-# History Search
-HISTFILE="$HOME/.config/zsh/histfile"
+# History
+HISTFILE=$HOME/.config/zsh/history
 HISTSIZE=99999
-SAVESIZE=99999
+SAVEHIST=99999
+setopt sharehistory extendedhistory histignorealldups histignorespace histreduceblanks
+
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
