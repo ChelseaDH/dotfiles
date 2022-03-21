@@ -18,8 +18,12 @@ autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 
-[[ -n "$key[Up]"   ]] && bindkey -- "$key[Up]"   up-line-or-beginning-search
-[[ -n "$key[Down]" ]] && bindkey -- "$key[Down]" down-line-or-beginning-search
+bindkey "^F" fzf-file-widget  # Ctrl+F file search (fzf)
+bindkey "^[[A" fzf-history-widget  # Up (fzf)
+bindkey "^[[B" fzf-history-widget  # Down (fzf)
+bindkey "${terminfo[kcuu1]}" fzf-history-widget  # Up (fzf)
+bindkey "${terminfo[kcud1]}" fzf-history-widget  # Down (fzf)
+source /usr/share/fzf/key-bindings.zsh
 
 # Colours 
 setopt COMPLETE_ALIASES
