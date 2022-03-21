@@ -28,3 +28,17 @@ source /usr/share/fzf/key-bindings.zsh
 # Colours 
 setopt COMPLETE_ALIASES
 export PROMPT='%F{white}%n%f@%F{red}%m%f %F{014}%~%f %# '
+
+export PATH="$PATH:$HOME/bin"
+
+# Aliases
+# Git
+alias gs='git status'
+alias ga='git add'
+alias gl='git log'
+alias gc='git commit'
+alias gca='git commit --amend'
+alias gcane='git commit --amend --no-edit'
+alias gp='git push'
+alias gpfwl='git push --force-with-lease'
+alias gpl='git pull'
